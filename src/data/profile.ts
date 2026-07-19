@@ -13,6 +13,9 @@ export interface ProfileData {
       url: string;
       icon?: string;
     }>;
+    heroTagline?: string;
+    heroRoles?: string[];
+    heroCredentials?: string;
   };
   skills: Array<{
     name: string;
@@ -55,6 +58,10 @@ export interface ProfileData {
     location: string;
     availability: string;
     message?: string;
+    heading?: string;
+    subheading?: string;
+    quote?: string;
+    quoteAuthor?: string;
   };
 }
 
@@ -65,11 +72,17 @@ const profile: ProfileData = {
     email: "anubhi.choudhary.25i@gmail.com",
     phone: "+91-96699-71857",
     location: "Pune, India",
-    summary: "Seeking a marketing role to apply my skills and contribute to brand growth through creativity, innovation, continuous learning, and dedication.",
+    summary: "I have always been fascinated by how brands earn trust before they earn revenue, and what started as curiosity gradually evolved into a deeper interest in how marketing shapes demand, influences decisions, and drives growth.Over time, I have worked on building brands from the ground up by developing identity systems and executing technology-led campaigns. Currently, I lead integrated marketing, client strategy, and brand positioning at MM Activ Sci-Tech Communications, where my focus is on turning market insights into strategies that create real impact and deliver measurable results.With a PGDM in Marketing with Business Analytics, I approach marketing as a balance of sharp thinking and strong execution, building strategies that strengthen brand equity, improve visibility, and contribute directly to business outcomes.",
     picture: "/anubhi.jpeg",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/anubhi-choudhary-0bb680188/" },
-    ]
+    ],
+    heroTagline: "Curious • Creative • Driven",
+    heroRoles: [
+      "Marketing Communication Manager @MM Activ Sci-Tech Communications",
+      "Marketing Strategist | Brand Communication | Digital Storyteller"
+    ],
+    heroCredentials: "PGDM'25 | Ex-Nestlé | Ex-STPL"
   },
   skills: [
     { name: "Brand Communication", level: 90 },
@@ -133,12 +146,7 @@ const profile: ProfileData = {
       end: "2025",
       location: "Indore, India",
       gpa: "83%",
-      achievements: [
-        "Winner of the 100Rs Venture Activity, leading a team of 9 to secure 1st place out of 18 teams",
-        "Achieved 2nd place out of 180 students in the Business Orientation Project",
-        "Campus Reporter at Jaipuria Institute of Management in collaboration with Business Standard",
-        "President of the Entrepreneurship Committee, led a team of 18 members, driving strategic planning and execution of 15+ high-impact events"
-      ]
+      
     },
     {
       institution: "Chameli Devi Group of Institutions",
@@ -214,7 +222,11 @@ const profile: ProfileData = {
     phone: "+91-96699-71857",
     location: "Pune, India",
     availability: "Open to marketing leadership opportunities",
-    message: "Passionate marketing professional with expertise in brand communication, digital marketing, and content strategy. Let's connect to create impactful brand stories together!"
+    message: "Passionate marketing professional with expertise in brand communication, digital marketing, and content strategy. Let's connect to create impactful brand stories together!",
+    heading: "Let's Connect",
+    subheading: "Let's Build Something Worth Talking About",
+    quote: "Behind every strong brand is a story that doesn't try too hard, it just connects.",
+    quoteAuthor: "Anubhi Choudhary"
   }
 };
 

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubhi Choudhary | Marketing Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS for proper grid (same as Prawaas.com) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Animate.css for WOW.js animations (same as Prawaas.com) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffdfc;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+
+    /* Prawaas.com Style Cards - Event Spectrum */
+    .service-section {
+      background: #fefaf8;
+      padding: 80px 0;
+      overflow: hidden;
+    }
+
+    .section-title {
+      margin-bottom: 50px;
+    }
+
+    .sub-style {
+      margin-bottom: 20px;
+    }
+
+    .sub-title {
+      color: #c72a2f;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      display: inline-block;
+      background: #fff0ed;
+      padding: 5px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+    }
+
+    .display-6 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .service-item {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(199,42,47,0.15);
+    }
+
+    .service-inner {
+      position: relative;
+    }
+
+    .service-img {
+      position: relative;
+      overflow: hidden;
+      height: 240px;
+    }
+
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-item:hover .service-img img {
+      transform: scale(1.1);
+    }
+
+    .service-title {
+      position: relative;
+      padding: 0 20px 20px;
+      margin-top: -50px;
+      z-index: 2;
+    }
+
+    .service-title-name {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover .service-title-name {
+      box-shadow: 0 10px 30px rgba(199,42,47,0.12);
+    }
+
+    .service-title-name .bg-primary {
+      background: #c72a2f !important;
+      border-radius: 50px;
+      display: inline-block;
+      margin-top: -45px !important;
+      margin-bottom: 20px !important;
+      transition: all 0.3s ease;
+    }
+
+    .service-title-name .bg-primary a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .service-item:hover .service-title-name .bg-primary {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(199,42,47,0.4);
+    }
+
+    .service-title-name .btn.bg-light {
+      background: #f8f9fa !important;
+      color: #c72a2f;
+      border: 1px solid #c72a2f20;
+      transition: all 0.3s ease;
+    }
+
+    .service-title-name .btn.bg-light:hover {
+      background: #c72a2f !important;
+      color: white !important;
+      transform: translateY(-3px);
+    }
+
+    .service-content {
+      background: white;
+      border-radius: 16px;
+      margin-top: 20px;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .service-content h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0;
+      color: #1a1a1a;
+    }
+
+    .service-content p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary2 {
+      background: #c72a2f;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary2:hover {
+      background: #a31f24;
+      transform: translateY(-3px);
+      color: white;
+      box-shadow: 0 5px 15px rgba(199,42,47,0.3);
+    }
+
+    /* Portfolio Cards - Same as Prawaas Service Items */
+    .portfolio-item {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(199,42,47,0.15);
+    }
+
+    .portfolio-img {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-item:hover .portfolio-img img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-title {
+      position: relative;
+      padding: 0 20px 20px;
+      margin-top: -40px;
+      z-index: 2;
+    }
+
+    .portfolio-title-name {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-title-name {
+      box-shadow: 0 10px 30px rgba(199,42,47,0.12);
+    }
+
+    .portfolio-category-badge {
+      background: #c72a2f;
+      color: white;
+      border-radius: 50px;
+      display: inline-block;
+      padding: 6px 18px;
+      margin-top: -35px;
+      margin-bottom: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-category-badge {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(199,42,47,0.4);
+    }
+
+    .portfolio-title-name h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+      transition: color 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-title-name h3 {
+      color: #c72a2f;
+    }
+
+    .portfolio-title-name p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-results-badge {
+      background: #fef2f0;
+      color: #c72a2f;
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .portfolio-btn {
+      background: transparent;
+      color: #c72a2f;
+      border: 1px solid #c72a2f20;
+      padding: 8px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .portfolio-btn:hover {
+      background: #c72a2f;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Typing animation */
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fade-up 0.6s ease-out forwards;
+    }
+
+    .animation-delay-200 {
+      animation-delay: 200ms;
+    }
+
+    .opacity-0 {
+      opacity: 0;
+    }
+
+    .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 56px;
+      height: 3px;
+      background: #c72a2f;
+      border-radius: 4px;
+    }
+    h2.heading-center {
+      display: block;
+      text-align: center;
+    }
+    h2.heading-center:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section {
+      padding: 80px 0;
+      border-bottom: 1px solid #f0ece9;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    header {
+      background: rgba(255,255,255,0.96);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #f0e6e2;
+      backdrop-filter: blur(8px);
+    }
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, #b11f24 0%, #e03a3f 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c2c2c;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #c72a2f;
+    }
+
+    .btn-custom {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .btn-primary-custom {
+      background: #c72a2f;
+      color: white;
+    }
+    .btn-primary-custom:hover {
+      background: #a31f24;
+      transform: translateY(-2px);
+    }
+    .btn-outline-custom {
+      border: 1.5px solid #c72a2f;
+      color: #c72a2f;
+      background: transparent;
+    }
+    .btn-outline-custom:hover {
+      background: #fff1f0;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 0 100px;
+      background: linear-gradient(145deg, #ffffff 0%, #fef8f6 100%);
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .highlight {
+      color: #c72a2f;
+    }
+
+    .hero img {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      border: 4px solid white;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 25px 40px -15px rgba(199,42,47,0.3);
+      border-color: #c72a2f;
+    }
+
+    .animated-taglines {
+      margin: 20px 0;
+    }
+
+    .tagline-item {
+      font-weight: 500;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+      position: relative;
+      display: inline-block;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .tagline-item:hover {
+      transform: translateX(8px);
+      color: #c72a2f;
+    }
+
+    .tagline-item:first-of-type {
+      font-weight: 600;
+      color: #c72a2f;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* About grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .skill-tag {
+      background: #fef2f0;
+      padding: 5px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #b11f24;
+      display: inline-block;
+      margin: 4px;
+      transition: all 0.2s ease;
+    }
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      background: #c72a2f;
+      color: white;
+    }
+
+    /* Blog grid */
+    .blog-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .blog-post {
+      border-bottom: 1px solid #f0e4de;
+      padding-bottom: 28px;
+      transition: all 0.3s ease;
+    }
+    .blog-post:hover {
+      transform: translateX(8px);
+    }
+    .blog-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+    .blog-post:hover .blog-title {
+      color: #c72a2f;
+    }
+    .blog-meta {
+      font-size: 0.75rem;
+      color: #c72a2f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .blog-excerpt {
+      color: #4b4b4b;
+      margin-bottom: 12px;
+    }
+    .read-more {
+      color: #c72a2f;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .read-more:hover {
+      transform: translateX(5px);
+      text-decoration: underline;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .contact-info {
+      background: #fefaf8;
+      padding: 32px;
+      border-radius: 28px;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 24px 0;
+      transition: all 0.3s ease;
+    }
+    .contact-detail:hover {
+      transform: translateX(8px);
+    }
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: #fff0ed;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #c72a2f;
+      transition: all 0.3s ease;
+    }
+    .contact-detail:hover .contact-icon {
+      background: #c72a2f;
+      color: white;
+      transform: scale(1.1) rotate(5deg);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    input, textarea {
+      padding: 14px 18px;
+      border: 1px solid #e6dbd5;
+      border-radius: 28px;
+      font-family: inherit;
+      background: white;
+      transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #c72a2f;
+      box-shadow: 0 0 0 3px rgba(199,42,47,0.1);
+    }
+    button[type="submit"] {
+      background: #c72a2f;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background: #a31f24;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #fefaf8;
+      text-align: center;
+      padding: 32px;
+      color: #6b625c;
+      font-size: 0.8rem;
+      border-top: 1px solid #f0e4de;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #c72a2f;
+    }
+
+    .error-message {
+      text-align: center;
+      padding: 40px;
+      color: #c72a2f;
+      background: #fff0ed;
+      border-radius: 16px;
+    }
+
+    /* Page view container */
+    .page-view {
+      display: none;
+    }
+    .page-view.active-page {
+      display: block;
+    }
+
+    /* WOW.js animation visible fix */
+    .wow {
+      visibility: hidden;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 800px) {
+      .about-grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .navbar-custom {
+        flex-direction: column;
+        gap: 14px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .container-custom {
+        padding: 0 20px;
+      }
+      .section {
+        padding: 50px 0;
+      }
+      .hero {
+        padding: 80px 0 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container-custom">
+    <div class="navbar-custom">
+      <div class="logo" data-page="home">Anubhi Choudhary</div>
+      <ul class="nav-links">
+        <li><a data-page="home">Home</a></li>
+        <li><a data-page="about">About</a></li>
+        <li><a data-page="portfolio">Portfolio</a></li>
+        <li><a data-page="blog">Blog</a></li>
+        <li><a data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page-view active-page">
+    <section class="hero">
+      <div class="container-custom">
+        <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+          <div style="flex: 1;" class="wow fadeInLeft" data-wow-delay="0.1s">
+            <h1>Anubhi <span class="highlight">Choudhary</span></h1>
+            
+            <div class="creative-tagline animate-fade-up opacity-0 animation-delay-200" 
+                style="margin-bottom: 20px; padding-left: 20px; border-left: 3px solid #c72a2f;">
+                <span id="typingTagline" style="font-size: 1.1rem; color: #c72a2f; font-weight: 500; display: inline-block;"></span>
+            </div>
+                        
+            <div class="animated-taglines">
+              <div class="tagline-item" style="animation-delay: 0.1s">
+                Marketing Communication Manager @MM Activ Sci-Tech Communications
+              </div>
+              <div class="tagline-item" style="animation-delay: 0.3s">
+                Marketing Strategist | Brand Communication | Digital Storyteller
+              </div>
+            </div>
+            
+            <p style="margin-bottom: 28px; max-width: 600px; margin-top: 12px;">PGDM'25 | Ex-Nestlé | Ex-STPL</p>
+            
+            <div>
+              <button class="btn-custom btn-primary-custom" data-page="portfolio">View Portfolio</button>
+              <button class="btn-custom btn-outline-custom" data-page="contact" style="margin-left: 15px;">Let's Connect</button>
+            </div>
+            
+            <div style="margin-top: 40px;">
+              <a data-page="about" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #1a1a1a; cursor: pointer;">
+                <span>Explore my journey</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14"></path>
+                  <path d="m19 12-7 7-7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div style="flex: 0 0 280px;" class="wow fadeInRight" data-wow-delay="0.3s">
+            <img src="/images/profile/anubhi.jpeg" alt="Anubhi Choudhary" 
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23fae9e4%22/%3E%3Ctext x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23aa5b4e%22 font-size=%2240%22%3E👤%3C/text%3E%3C/svg%3E'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-custom">
+        <h2 class="wow fadeInUp" data-wow-delay="0.1s">Latest Musings</h2>
+        <div id="home-blog-preview" class="blog-grid">
+          <div class="loading">Loading recent thoughts...</div>
+        </div>
+        <div style="text-align: center; margin-top: 32px;" class="wow fadeInUp" data-wow-delay="0.3s">
+          <button class="btn-custom btn-outline-custom" data-page="blog">Read All Articles →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-custom">
+        <h2 class="wow fadeInUp" data-wow-delay="0.1s">Let's Connect</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info wow fadeInLeft" data-wow-delay="0.2s">
+            <h3 style="margin-bottom: 20px;">Reach out directly</h3>
+            <div class="contact-detail">
+              <div class="contact-icon">📧</div>
+              <div><strong>Email</strong><br>anubhi.choudhary.25i@gmail.com</div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">📞</div>
+              <div><strong>Phone</strong><br>+91 9669971857</div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">🔗</div>
+              <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/anubhi-choudhary-0bb680188/" target="_blank" style="color:#c72a2f;">linkedin.com/in/anubhi-choudhary</a></div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">📍</div>
+              <div><strong>Based in</strong><br>Delhi NCR, India</div>
+            </div>
+          </div>
+          <div class="wow fadeInRight" data-wow-delay="0.3s">
+            <form id="homeContactForm">
+              <input type="text" id="home_name" placeholder="Full name" required>
+              <input type="email" id="home_email" placeholder="Email address" required>
+              <textarea id="home_message" rows="4" placeholder="Tell me about your project..."></textarea>
+              <button type="submit">Send Message →</button>
+              <p id="homeFormFeedback" style="margin-top: 8px; font-size: 0.8rem;"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE (simplified for brevity - same structure) -->
+  <div id="page-about" class="page-view">
+    <div class="container-custom" style="padding: 60px 32px;">
+      <h2 class="wow fadeInUp" data-wow-delay="0.1s">About</h2>
+      <div class="about-grid">
+        <div class="wow fadeInLeft" data-wow-delay="0.2s" style="border: 1px solid #e6dbd5; border-radius: 24px; padding: 32px; background: white;">
+          <p style="margin-bottom: 20px; line-height: 1.6;">I have always been fascinated by how brands earn trust before they earn revenue, and what started as curiosity gradually evolved into a deeper interest in how marketing shapes demand, influences decisions, and drives growth.</p>
+          <p style="margin-bottom: 20px; line-height: 1.6;">Over time, I have worked on building brands from the ground up by developing identity systems and executing technology-led campaigns. Currently, I lead integrated marketing, client strategy, and brand positioning at MM Activ Sci-Tech Communications, where my focus is on turning market insights into strategies that create real impact and deliver measurable results.</p>
+          <p style="margin-bottom: 0; line-height: 1.6;">With a PGDM in Marketing with Business Analytics, I approach marketing as a balance of sharp thinking and strong execution, building strategies that strengthen brand equity, improve visibility, and contribute directly to business outcomes.</p>
+        </div>
+        <div>
+          <div class="wow fadeInRight" data-wow-delay="0.2s" style="border: 1px solid #e6dbd5; border-radius: 24px; padding: 32px; background: white; margin-bottom: 24px;">
+            <h3>🎓 Academic Record</h3>
+            <div style="margin-top: 20px;"><strong>PGDM</strong><br>2023-25 | Jaipuria Institute of Management | 83%</div>
+            <div style="margin-top: 15px;"><strong>B.Com(Hons)</strong><br>2019-22 | Chameli Devi Group of Institutions | 79.2%</div>
+          </div>
+          <div class="wow fadeInRight" data-wow-delay="0.3s" style="border: 1px solid #e6dbd5; border-radius: 24px; padding: 32px; background: white;">
+            <h3>🏆 Achievements</h3>
+            <p style="margin-top: 15px;">✓ Campus Reporter at Jaipuria Institute of Management</p>
+            <p>✓ President of the Entrepreneurship Committee</p>
+            <p>✓ Published 10+ articles in The Economic Times</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO PAGE with Prawaas.com style cards -->
+  <div id="page-portfolio" class="page-view">
+    <div class="service-section">
+      <div class="container-custom">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="sub-style">
+            <h5 class="sub-title px-3">My Work</h5>
+          </div>
+          <h1 class="display-6 mb-4">Featured Portfolio</h1>
+          <p class="mb-0">A collection of my marketing campaigns, brand strategies, and creative projects that have delivered measurable results.</p>
+        </div>
+        <div class="row g-4" id="portfolio-full-container">
+          <div class="col-12 text-center"><div class="loading">Loading portfolio projects...</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG PAGE -->
+  <div id="page-blog" class="page-view">
+    <div class="container-custom" style="padding: 60px 32px;">
+      <h2 class="wow fadeInUp" data-wow-delay="0.1s">Blog & Musings</h2>
+      <div id="blog-full-container" class="blog-grid"></div>
+    </div>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="page-contact" class="page-view">
+    <div class="container-custom" style="padding: 60px 32px;">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 class="heading-center wow fadeInUp" data-wow-delay="0.1s">Let's Connect</h2>
+        <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Let's Build Something Worth Talking About</h3>
+        <div style="margin: 2.5rem auto; max-width: 500px; padding: 1.5rem; border-left: 3px solid #c72a2f; background: #fefaf8;">
+          <p style="font-style: italic;">"Behind every strong brand is a story that doesn't try too hard, it just connects."</p>
+          <p style="font-weight: 500; color: #c72a2f;">— Anubhi Choudhary</p>
+        </div>
+      </div>
+      <div class="contact-wrapper" style="margin-top: 3rem;">
+        <div class="contact-info">
+          <h3>Reach out directly</h3>
+          <div class="contact-detail"><div class="contact-icon">📧</div><div><strong>Email</strong><br>anubhi.choudhary.25i@gmail.com</div></div>
+          <div class="contact-detail"><div class="contact-icon">📞</div><div><strong>Phone</strong><br>+91 9669971857</div></div>
+          <div class="contact-detail"><div class="contact-icon">🔗</div><div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/anubhi-choudhary-0bb680188/" target="_blank" style="color:#c72a2f;">linkedin.com/in/anubhi-choudhary</a></div></div>
+        </div>
+        <div>
+          <form id="pageContactForm">
+            <input type="text" id="page_name" placeholder="Full name" required>
+            <input type="email" id="page_email" placeholder="Email address" required>
+            <textarea id="page_message" rows="4" placeholder="Tell me about your project..."></textarea>
+            <button type="submit">Send Message →</button>
+            <p id="pageFormFeedback" style="margin-top: 8px; font-size: 0.8rem;"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container-custom">
+    <p>© 2026 Anubhi Choudhary — Strategy, creativity, and purpose-driven marketing.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Initialize WOW.js
+  new WOW().init();
+
+  // Typewriter effect
+  const taglineText = "Curious • Creative • Driven";
+  const typingElement = document.getElementById("typingTagline");
+  let charIndex = 0;
+
+  function typeWriter() {
+    if (charIndex < taglineText.length && typingElement) {
+      typingElement.textContent += taglineText.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriter, 80);
+    }
+  }
+  if (typingElement) setTimeout(typeWriter, 250);
+
+  // Page navigation
+  const pages = ['home', 'about', 'portfolio', 'blog', 'contact'];
+  function showPage(pageId) {
+    pages.forEach(p => {
+      const el = document.getElementById(`page-${p}`);
+      if (el) el.classList.remove('active-page');
+    });
+    const active = document.getElementById(`page-${pageId}`);
+    if (active) active.classList.add('active-page');
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      if (linkPage === pageId) link.classList.add('active');
+      else link.classList.remove('active');
+    });
+    history.pushState(null, null, `#${pageId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-page]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const page = el.getAttribute('data-page');
+      if (page && pages.includes(page)) showPage(page);
+    });
+  });
+
+  function handleHash() {
+    const hash = window.location.hash.substring(1);
+    if (hash && pages.includes(hash)) showPage(hash);
+    else showPage('home');
+  }
+  window.addEventListener('hashchange', handleHash);
+  handleHash();
+
+  // Load portfolio with Prawaas.com style
+  async function loadPortfolio(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = '<div class="col-12 text-center"><div class="loading">Loading portfolio projects...</div></div>';
+    try {
+      const response = await fetch('/content/portfolio/index.json');
+      if (!response.ok) throw new Error();
+      const items = await response.json();
+      if (!items || items.length === 0) {
+        container.innerHTML = '<div class="col-12 text-center"><p>No portfolio items yet.</p></div>';
+        return;
+      }
+      container.innerHTML = items.map((item, index) => `
+        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="${0.1 + (index * 0.1)}s">
+          <div class="portfolio-item" onclick="showPortfolioDetail('${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${escapeHtml(item.results || '')}', '${item.image || ''}', '${escapeHtml(item.category || 'Project')}')">
+            <div class="portfolio-img">
+              <img src="${item.image || ''}" alt="${escapeHtml(item.title)}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23fae9e4%22/%3E%3Ctext x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23aa5b4e%22%3E📌%3C/text%3E%3C/svg%3E'">
+            </div>
+            <div class="portfolio-title">
+              <div class="portfolio-title-name">
+                <div class="portfolio-category-badge">${escapeHtml(item.category || 'Project')}</div>
+                <h3>${escapeHtml(item.title)}</h3>
+                <p>${escapeHtml(item.desc.length > 100 ? item.desc.substring(0, 100) + '...' : item.desc)}</p>
+                ${item.results ? `<div class="portfolio-results-badge">📊 ${escapeHtml(item.results)}</div>` : ''}
+                <div><button class="portfolio-btn" onclick="event.stopPropagation(); showPortfolioDetail('${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${escapeHtml(item.results || '')}', '${item.image || ''}', '${escapeHtml(item.category || 'Project')}')">Explore More →</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      new WOW().init();
+    } catch (error) {
+      container.innerHTML = `<div class="col-12 text-center"><div class="error-message">⚠️ Unable to load portfolio. Make sure you're running a local server.<br><small>Try: python -m http.server 8000</small></div></div>`;
+    }
+  }
+
+  async function loadBlogs(containerId, limit = null) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const blogPosts = [{
+      title: "Budget 2026 & the Quiet Rewriting of Marketing",
+      date: "February 4, 2026",
+      excerpt: "The most important marketing signal in Budget 2026 wasn't labelled 'marketing' at all. It was the focus on the Orange Economy.",
+      externalLink: "https://www.linkedin.com/posts/anubhi-choudhary-0bb680188_budget-2026-the-quiet-rewriting-of-marketing-activity-7424675988078485504-5eYz"
+    }];
+    let posts = blogPosts;
+    if (limit) posts = posts.slice(0, limit);
+    container.innerHTML = posts.map(post => `
+      <div class="blog-post wow fadeInUp" data-wow-delay="0.1s">
+        <div class="blog-meta">${escapeHtml(post.date)}</div>
+        <div class="blog-title">${escapeHtml(post.title)}</div>
+        <div class="blog-excerpt">${escapeHtml(post.excerpt)}</div>
+        <a href="${post.externalLink}" target="_blank" class="read-more">Read on LinkedIn →</a>
+      </div>
+    `).join('');
+    new WOW().init();
+  }
+
+  function showPortfolioDetail(title, desc, results, image, category) {
+    const modal = document.createElement('div');
+    modal.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:1000; display:flex; align-items:center; justify-content:center;';
+    modal.innerHTML = `
+      <div style="background:white; max-width:600px; width:90%; border-radius:24px; padding:40px; position:relative; max-height:85vh; overflow-y:auto;">
+        <button onclick="this.closest('div').parentElement.remove()" style="position:absolute; top:16px; right:16px; background:#c72a2f; color:white; border:none; width:32px; height:32px; border-radius:50%; cursor:pointer;">×</button>
+        <span style="background:#fef2f0; padding:4px 12px; border-radius:20px; font-size:0.7rem; font-weight:600; color:#c72a2f;">${escapeHtml(category)}</span>
+        <h3 style="color:#c72a2f; margin:16px 0;">${escapeHtml(title)}</h3>
+        ${image ? `<img src="${image}" style="width:100%; border-radius:16px; margin-bottom:20px;" onerror="this.style.display='none'">` : ''}
+        <p style="line-height:1.6;">${escapeHtml(desc)}</p>
+        ${results ? `<p style="background:#fef2f0; padding:12px; border-radius:12px; color:#b11f24;"><strong>📊 Results:</strong> ${escapeHtml(results)}</p>` : ''}
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    });
+  }
+
+  function setupContactForm(formId, nameId, emailId, msgId, feedbackId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById(nameId).value;
+      const email = document.getElementById(emailId).value;
+      const message = document.getElementById(msgId).value;
+      const feedback = document.getElementById(feedbackId);
+      if (!name || !email || !message) {
+        feedback.style.color = '#c72a2f';
+        feedback.innerText = '❌ Please fill all fields';
+        setTimeout(() => feedback.innerText = '', 3000);
+        return;
+      }
+      if (!email.includes('@')) {
+        feedback.style.color = '#c72a2f';
+        feedback.innerText = '❌ Please enter a valid email';
+        setTimeout(() => feedback.innerText = '', 3000);
+        return;
+      }
+      feedback.style.color = '#1e7e34';
+      feedback.innerText = '✓ Message sent! I\'ll get back to you soon.';
+      form.reset();
+      setTimeout(() => feedback.innerText = '', 4000);
+    });
+  }
+
+  loadPortfolio('portfolio-full-container');
+  loadBlogs('blog-full-container');
+  loadBlogs('home-blog-preview', 2);
+  setupContactForm('homeContactForm', 'home_name', 'home_email', 'home_message', 'homeFormFeedback');
+  setupContactForm('pageContactForm', 'page_name', 'page_email', 'page_message', 'pageFormFeedback');
+</script>
+</body>
+</html>

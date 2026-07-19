@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import AnimatedSection from '@/components/AnimatedSection';
 import profile from '@/data/profile';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const ContactSection: React.FC = () => {
@@ -65,18 +65,41 @@ const ContactSection: React.FC = () => {
     }
   };
   
+  const linkedinLink = profile.basics.links.find(
+    (link) => link.label.toLowerCase() === 'linkedin'
+  );
+
   return (
     <AnimatedSection id="contact" className="py-16">
       <div className="container max-w-content mx-auto px-4">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-semibold mb-8 relative">
-            Contact Me
+            {profile.contact.heading || "Let's Connect"}
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-primary rounded-full"></span>
           </h2>
           
+          {profile.contact.subheading && (
+            <h3 className="text-xl md:text-2xl font-medium text-center mb-4 text-muted-foreground">
+              {profile.contact.subheading}
+            </h3>
+          )}
+
+          {profile.contact.quote && (
+            <div className="max-w-xl mx-auto my-6 p-4 border-l-4 border-primary bg-secondary/20 rounded-r-lg text-center lg:text-left">
+              <p className="italic text-muted-foreground">
+                "{profile.contact.quote}"
+              </p>
+              {profile.contact.quoteAuthor && (
+                <p className="text-sm font-semibold text-primary mt-2">
+                  — {profile.contact.quoteAuthor}
+                </p>
+              )}
+            </div>
+          )}
+
           <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div>
-              <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
+              <h3 className="text-xl font-semibold mb-6">Reach Out Directly</h3>
               
               {profile.contact.message && (
                 <p className="text-muted-foreground mb-6">
@@ -118,6 +141,23 @@ const ContactSection: React.FC = () => {
                     <span className="text-muted-foreground">{profile.contact.location}</span>
                   </div>
                 </div>
+
+                {linkedinLink && (
+                  <div className="flex items-start">
+                    <Linkedin className="w-5 h-5 mr-4 text-primary mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-medium">LinkedIn</h4>
+                      <a 
+                        href={linkedinLink.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        {linkedinLink.url.replace(/^https?:\/\/(www\.)?/, '')}
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
               
               <div className="mt-8">
@@ -142,6 +182,7 @@ const ContactSection: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    placeholder="Full Name"
                     required
                     className="w-full px-4 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
                     aria-describedby="name-description"
@@ -158,6 +199,7 @@ const ContactSection: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    placeholder="Email Address"
                     required
                     className="w-full px-4 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
                     aria-describedby="email-description"
@@ -173,6 +215,7 @@ const ContactSection: React.FC = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    placeholder="Tell me about your project..."
                     required
                     rows={5}
                     className="w-full px-4 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"
