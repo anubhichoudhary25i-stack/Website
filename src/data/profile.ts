@@ -118,7 +118,7 @@ const profile: ProfileData = {
         "Driving integrated marketing communications (IMC) and promotional campaigns for Prawaaas 5.0",
         "Overseeing content strategy for Exhibition Excellence Awards 2026 (EEA 2026)",
         "Managing key clients: Caneus mnt, Swiss Expo Logistics, Reliance Animation",
-        "Coordinating major events including Prawaaas 5.0, EEA Summit 2026, 15th IEIA Open Seminar, Bengaluru India Nano 2026, and BTS 2026, SuschemE 3.0"
+        "Coordinating major events including Prawaaas 5.0, EEA Summit 2026, 15th IEIA Open Seminar, Bengaluru India Nano 2026, BTS 2026, SuschemE 3.0"
       ]
     },
     {
