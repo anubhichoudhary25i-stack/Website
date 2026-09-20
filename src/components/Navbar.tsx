@@ -8,10 +8,7 @@ import profile from '@/data/profile';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useBlogs } from '@/hooks/useBlogs';
 
-interface NavLink {
-  id: string;
-  label: string;
-}
+import { NavLink } from './NavLinks';
 
 const generateNavLinks = (
   profileData: typeof profile,
@@ -20,17 +17,25 @@ const generateNavLinks = (
 ): NavLink[] => {
   const links: NavLink[] = [
     { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
   ];
 
-  if (profileData.skills.length > 0) links.push({ id: 'skills', label: 'Skills' });
-  if (profileData.experience.length > 0) links.push({ id: 'experience', label: 'Experience' });
+  const aboutChildren: NavLink[] = [];
+  
+  if (profileData.skills.length > 0) aboutChildren.push({ id: 'skills', label: 'Skills' });
+  if (profileData.experience.length > 0) aboutChildren.push({ id: 'experience', label: 'Experience' });
+  if (profileData.education.length > 0) aboutChildren.push({ id: 'education', label: 'Education' });
+  if (profileData.achievements.length > 0) aboutChildren.push({ id: 'achievements', label: 'Achievements' });
+  if (profileData.extracurricular.length > 0) aboutChildren.push({ id: 'extracurricular', label: 'Activities' });
+
+  links.push({ 
+    id: 'about', 
+    label: 'About',
+    children: aboutChildren.length > 0 ? aboutChildren : undefined
+  });
+
   if (hasPortfolio) links.push({ id: 'portfolio', label: 'Portfolio' });
   if (hasBlogs) links.push({ id: 'blogs', label: 'Blogs' });
-  if (profileData.education.length > 0) links.push({ id: 'education', label: 'Education' });
-  if (profileData.achievements.length > 0) links.push({ id: 'achievements', label: 'Achievements' });
-  if (profileData.extracurricular.length > 0) links.push({ id: 'extracurricular', label: 'Activities' });
-
+  
   links.push({ id: 'contact', label: 'Contact' });
 
   return links;

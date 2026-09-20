@@ -122,6 +122,20 @@ const profile: ProfileData = {
       ]
     },
     {
+      role: "Sales Officer Trainee",
+      company: "Nestlé",
+      location: "Delhi, India",
+      start: "Jun 2025",
+      end: "Aug 2025",
+      bullets: [
+        "Supported management of ~₹2 Cr monthly business portfolio across distributor accounts in the HoReCa (Hotels, Restaurants & Cafés) segment, working alongside the sales team to drive account performance.",
+        "Coordinated with 1 distributor and 3+ sales executives across key Delhi markets, supporting outlet coverage, relationship management, and sales execution.",
+        "Generated ~₹1L incremental sales by onboarding 2+ new HoReCa outlets within 3 months through prospecting and on-ground sales initiatives.",
+        "Developed daily sales dashboards and performance trackers to monitor outlet coverage, sales performance, and execution gaps for faster decision-making.",
+        "Supported on-ground market strategy and sales execution, including outlet expansion, distributor coordination, order generation, and relationship management across key accounts."
+      ]
+    },
+    {
       role: "Marketing & Brand Communication Intern",
       company: "STPL",
       location: "Surat, India",
@@ -134,6 +148,46 @@ const profile: ProfileData = {
         "Executed targeted social media campaigns for the new Magik Cut product launch",
         "Created 4 audio branding caller tunes and 4 email signatures to unify STPL's brand identity across all business verticals",
         "Managed AR/VR integration by shortlisting 10 VR developers and finalizing a partner to enhance expo marketing experiences"
+      ]
+    },
+    {
+      role: "Marketing Intern",
+      company: "M3M Foundation",
+      location: "Gurugram, Haryana, India",
+      start: "Nov 2023",
+      end: "Dec 2023",
+      bullets: [
+        "Onboarded and trained 10+ micro-entrepreneurs on e-commerce platforms, enabling them to establish digital storefronts and expand their market reach.",
+        "Conducted field research across 5+ villages, including Tauru, Rathiwas, Sohna, and Nuh, engaging directly with micro-entrepreneurs to understand their business challenges and digital adoption.",
+        "Designed and administered 10+ survey tools to collect primary data on entrepreneurial needs, digital readiness, and market challenges.",
+        "Conducted workshops and training sessions for micro-entrepreneurs."
+      ]
+    },
+    {
+      role: "Web Content Writer",
+      company: "Padhle.in",
+      location: "Indore, Madhya Pradesh, India",
+      start: "Jan 2021",
+      end: "Jul 2021",
+      bullets: [
+        "Created engaging, SEO-friendly content across educational topics, ensuring clarity, accuracy, and audience relevance.",
+        "Researched and developed blogs, articles, and educational content aligned with student interests and search intent.",
+        "Transformed complex academic concepts into simple, reader-friendly content to improve comprehension and engagement.",
+        "Optimised content using SEO keywords, headings, meta descriptions, and content structures to improve search visibility.",
+        "Collaborated with the editorial/content team to proofread, refine, and maintain consistent brand tone and content quality."
+      ]
+    },
+    {
+      role: "Sales & Marketing Intern",
+      company: "Shine Projects",
+      location: "Hyderabad, Telangana, India",
+      start: "Apr 2021",
+      end: "Jun 2021",
+      bullets: [
+        "Generated and nurtured prospective leads through targeted sales and marketing outreach, converting 9 leads into customers.",
+        "Conducted lead qualification and follow-ups, understanding prospect requirements and aligning solutions with their business needs.",
+        "Supported end-to-end sales activities, from prospecting and initial communication to negotiation and conversion.",
+        "Conducted market and competitor research to identify prospects, understand customer requirements, and support business development initiatives."
       ]
     }
   ],
